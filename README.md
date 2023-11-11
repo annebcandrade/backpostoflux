@@ -19,6 +19,6 @@ utilizei a ORM sequelize para dizer ao back-end qual era o tipo de informação 
 Depois ajustei as rotas, no Get, para otimizar o trabalho decidi que buscaria o histórico por cpf, por ser um valor que geralmente só 
 o usuário sabe, então no Get ficou a rota /users/:cpf e o post ficou /users e devolvia o status 201 para cada usuário criado. 
 Nas regras de negócio, informei que nenhum campo poderia ser nulo/zero, AllowNull: False. E quando conectei ao front, se qualquer campo na aplicação for nulo, Retorna um parágrafo: 
-"Preencha todos os Campos". 
+"Preencha todos os Campos". E por fim, para que o Front pudesse ser conectado ao back baixei o Cors e implementei ele no arquivo principal. No front foi utilizado o AXIOS para conectar com o back, e no back foi utilizado o CORS permitindo o acesso do front. 
 
 Repositório Front: https://github.com/annebcandrade/frontpostoflux
