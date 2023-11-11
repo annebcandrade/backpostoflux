@@ -15,7 +15,7 @@ Node, Express, UUID, Sequelize, Docker, Banco de Dados Postgres, Cors, Arquitetu
 Quando recebi o desafio já vi que a aplicação back-end teria os métodos Get para exibir os registros do historico de cada motorista, 
 e post para criar um novo registro. Então montei toda estrutura, com app.js / server.js / controllers e models (usei arquitetura MVC)
 e claro, o banco de dados. Primeiro criei um container Docker, depois criei o banco de dados, as tabelas com as informações que queria de cada usuário, 
-utilizei a ORM sequilize para dizer ao back-end qual era o tipo de informação que eu queria (Sequelize.STRING) de cada informação. 
+utilizei a ORM sequelize para dizer ao back-end qual era o tipo de informação que eu queria (Sequelize.STRING) de cada informação. 
 Depois ajustei as rotas, no Get, para otimizar o trabalho decidi que buscaria o histórico por cpf, por ser um valor que geralmente só 
 o usuário sabe, então no Get ficou a rota /users/:cpf e o post ficou /users e devolvia o status 201 para cada usuário criado. 
 Nas regras de negócio, informei que nenhum campo poderia ser nulo/zero, AllowNull: False. E quando conectei ao front, se qualquer campo na aplicação for nulo, Retorna um parágrafo: 
